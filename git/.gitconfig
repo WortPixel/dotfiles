@@ -1,0 +1,9 @@
+[user]
+	name = Philipp Schlunder
+	email = philipp.schlunder@udo.edu
+
+[push]
+	default = simple
+
+[pull]
+	rebase = true

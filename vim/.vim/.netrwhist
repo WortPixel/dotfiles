@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/philipp/College/master-thesis/scripts/preparation_templates'
+let g:netrw_dirhist_2='/Users/philipp/Library/Application Support/Steam/SteamApps/common/Counter-Strike Global Offensive/config'
+let g:netrw_dirhist_3='/Users/philipp/movies'
+let g:netrw_dirhist_4='/Users/philipp/College/PeP/toolbox-workshop/make'
+let g:netrw_dirhist_5='/Users/philipp/Library'
+let g:netrw_dirhist_6='/Users/philipp/College/smd/Uebungen/Musterloesungen/schaetzen/Stichprobenvarianz'
