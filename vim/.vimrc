@@ -1,5 +1,7 @@
 execute pathogen#infect()
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
 filetype plugin on
 filetype indent on
 set mouse=a         " enable mouse selection
