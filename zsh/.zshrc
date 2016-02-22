@@ -16,7 +16,7 @@ export MADISON_DATA="/data/user/pschlunder"
 export PHIDO_HOME="/home/pschlunder"
 export PHIDO_DATA="/fhgfs/users/pschlunder"
 
-
+# wrapper for sshfs for easy connecting
 connect() {
     sshfs $1:$2 $3
 }
@@ -32,13 +32,13 @@ madison() {
 }
 
 phido() {
-    connect pub $PHIDO_HOME $THESIS/cluster/madison/home
-    connect data $PHIDO_DATA $THESIS/cluster/madison/data
+    connect pub $PHIDO_HOME $THESIS/cluster/phido/home
+    connect data $PHIDO_DATA $THESIS/cluster/phido/data
 }
 
 alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
-alias nb2="ipython2 notebook"
-alias nb3="ipython notebook"
+alias nb="ipython notebook"
+alias nb3="source activate p3 && juypter notebook"
 
 
 alias l="ls"
@@ -52,4 +52,5 @@ alias ping="ping -c 5"
 alias mv="mv -i"
 alias cp="cp -i"
 alias ln="ln -i"
+# silent root start-up
 alias root="root -l"
