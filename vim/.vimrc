@@ -4,7 +4,6 @@ set background=light
 colorscheme solarized
 filetype plugin on
 filetype indent on
-set mouse=a         " enable mouse selection
 
 " Indentation
 set autoindent      " copy indent from current line when starting newline
