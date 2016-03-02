@@ -39,6 +39,7 @@ phido() {
 alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
 alias nb="ipython notebook"
 alias nb3="source activate p3 && juypter notebook"
+alias cobalt="ssh -t pub ssh cobalt"
 
 
 alias l="ls"
