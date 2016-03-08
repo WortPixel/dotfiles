@@ -32,8 +32,8 @@ madison() {
 }
 
 phido() {
-    connect pub $PHIDO_HOME $THESIS/cluster/phido/home
-    connect data $PHIDO_DATA $THESIS/cluster/phido/data
+    connect phido2 $PHIDO_HOME $THESIS/cluster/phido/home
+    connect phido2 $PHIDO_DATA $THESIS/cluster/phido/data
 }
 
 alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
