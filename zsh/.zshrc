@@ -28,6 +28,7 @@ lido() {
 
 madison() {
     connect pub $MADISON_HOME $THESIS/cluster/madison/home
+    connect pub $MADISON_HOME/scripts/processing $THESIS/scripts/processing
     connect data $MADISON_DATA $THESIS/cluster/madison/data
 }
 
