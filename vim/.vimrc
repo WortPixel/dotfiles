@@ -15,6 +15,10 @@ set shiftwidth=4    " number of spaces to use for auto indent
 set ruler           " display ruler 
 set number          " show line and column number
 
-" call pyFlake8 on each write
-autocmd BufWritePost *.py call Flake8()
-autocmd FileType python setlocal completeopt-=preview
+" Clear highlighting on escape in normal mode
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
+" tex 
+autocmd BufNewFile,BufRead *.cls set ft=tex
+autocmd FileType tex set shiftwidth=2 | set tabstop=2 | set expandtab | set softtabstop=2 | set shiftround | set linebreak
