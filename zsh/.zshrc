@@ -4,7 +4,7 @@ ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git, sublime)
+plugins=(brew, git, osx, pip, sublime, web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,3 +56,7 @@ alias cp="cp -i"
 alias ln="ln -i"
 # silent root start-up
 alias root="root -l"
+
+## workflow shortcuts
+alias todo="vim $THESIS/README.md"
+alias finish="cd $THESIS; git status"
