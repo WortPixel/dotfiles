@@ -56,6 +56,8 @@ alias cp="cp -i"
 alias ln="ln -i"
 # silent root start-up
 alias root="root -l"
+# rsync with progress and svn/git excluded
+alias beam="rsync -avz --progress --exclude=.svn --exclude=.git --exclude=.DS_Store"
 
 ## workflow shortcuts
 alias todo="vim $THESIS/README.md"
