@@ -60,7 +60,7 @@ alias root="root -l"
 alias beam="rsync -avz --progress --exclude=.svn --exclude=.git --exclude=.DS_Store"
 
 ## workflow shortcuts
-alias todo="vim $THESIS/README.md"
+alias todo="vim $THESIS/notes/README.md"
 alias notes="jupyter notebook $THESIS/notes/source"
 alias open_notes="cd $THESIS/notes/ && make html && open build/html/index.html"
 alias finish="cd $THESIS; git status"
