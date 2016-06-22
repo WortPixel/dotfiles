@@ -31,7 +31,7 @@ function SetTexOptions()
 endfunction
 
 " python
-autocmd FileType py call SetPyOptions()
+autocmd FileType python call SetPyOptions()
 function SetPyOptions()
     set shiftwidth=4
     set tabstop=4
