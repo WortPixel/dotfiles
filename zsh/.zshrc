@@ -59,7 +59,6 @@ alias root="root -l"
 alias beam="rsync -avz --progress --exclude=.svn --exclude=.git --exclude=.DS_Store"
 
 ## workflow shortcuts
-#alias connect_notebook="ssh -t -t -L2221:localhost:2221 pschlunder@pub2.icecube.wisc.edu 'ssh -L2221:localhost:2221 pschlunder@cobalt05.icecube.wisc.edu'"
 alias connect_notebook="ssh -L2221:localhost:2221 iccobalt" 
 alias todo="vim $THESIS/notes/README.md"
 alias toread="open /Users/philipp/Dropbox/College/Physics/Neutrino\ Physics\ -\ Introduction\ -\ CERN.pdf"
