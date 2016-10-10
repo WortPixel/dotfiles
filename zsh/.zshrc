@@ -79,11 +79,7 @@ alias root="root -l"
 alias beam="rsync -avz --progress --exclude=.svn --exclude=.git --exclude=.DS_Store"
 
 ## workflow shortcuts
-<<<<<<< c1f7a170ab7cc225a74181b18d5b4498269ded19
 alias connect_notebook="ssh -L2221:localhost:2221 iccobalt" 
-=======
-alias connect_notebook="ssh -t -t -L2221:localhost:2221 iccobalt"
->>>>>>> Added function to use system python as an environment. Thanks Thorben
 alias todo="vim $THESIS/notes/README.md"
 alias toread="open /Users/philipp/Dropbox/College/Physics/Neutrino\ Physics\ -\ Introduction\ -\ CERN.pdf"
 alias notes="jupyter notebook $THESIS/notes/source"
