@@ -36,11 +36,31 @@ phido() {
     connect phido2 $PHIDO_DATA $THESIS/cluster/phido/data
 }
 
-alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
-alias nb="ipython notebook"
-alias nb3="source activate p3 && juypter notebook"
-alias cobalt="ssh -t icpub ssh iccobalt"
+function activate_python2 {
+  # Function to deactivate
+  function deactivate {
+  # Restore original state
+    if [ ! -z "$_OLD_PATH" ]; then
+      export PATH=${_OLD_PATH}
+      export PS1=${_OLD_PS1}
+      unset _OLD_PATH
+      unset _OLD_PS1
+      # Also remove this function from the scope
+      unset -f deactivate
+    fi
+    }
+  # If we are already running an active py2 environment
+  deactivate 
+  # Save old env vars
+  _OLD_PATH=${PATH}
+  _OLD_PS1=${PS1}
+  # Set new path on top of all
+  export PATH=${HOME}/Library/Python/2.7/bin:${PATH}
+  # Indicate that we are in the system python environment
+  export PS1="(SysPy2) $PS1"
+  }
 
+alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
 
 alias l="ls"
 alias ll="ls -la"
@@ -59,7 +79,11 @@ alias root="root -l"
 alias beam="rsync -avz --progress --exclude=.svn --exclude=.git --exclude=.DS_Store"
 
 ## workflow shortcuts
+<<<<<<< c1f7a170ab7cc225a74181b18d5b4498269ded19
 alias connect_notebook="ssh -L2221:localhost:2221 iccobalt" 
+=======
+alias connect_notebook="ssh -t -t -L2221:localhost:2221 iccobalt"
+>>>>>>> Added function to use system python as an environment. Thanks Thorben
 alias todo="vim $THESIS/notes/README.md"
 alias toread="open /Users/philipp/Dropbox/College/Physics/Neutrino\ Physics\ -\ Introduction\ -\ CERN.pdf"
 alias notes="jupyter notebook $THESIS/notes/source"
