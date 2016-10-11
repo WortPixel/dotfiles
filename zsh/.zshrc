@@ -60,6 +60,13 @@ function activate_python2 {
   export PS1="(SysPy2) $PS1"
   }
 
+function activate_root5 {
+  cd /Users/philipp/Software/root_5.34.36/build/
+  source bin/thisroot.sh
+  cd $HOME
+  }
+
+
 alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
 
 alias l="ls"
