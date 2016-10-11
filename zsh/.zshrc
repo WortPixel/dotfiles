@@ -88,7 +88,7 @@ alias beam="rsync -avz --progress --exclude=.svn --exclude=.git --exclude=.DS_St
 ## workflow shortcuts
 alias connect_notebook="ssh -L2221:localhost:2221 iccobalt" 
 alias todo="vim $THESIS/notes/README.md"
-alias toread="open /Users/philipp/Dropbox/College/Physics/Neutrino\ Physics\ -\ Introduction\ -\ CERN.pdf"
+alias toread="open $HOME/Dropbox/College/Physics/Neutrino\ Physics\ -\ Introduction\ -\ CERN.pdf"
 alias notes="jupyter notebook $THESIS/notes/source"
 alias open_notes="cd $THESIS/notes/ && make html && open build/html/index.html"
 alias finish="cd $THESIS/scripts/; git status"
