@@ -66,6 +66,13 @@ function activate_root5 {
   cd $HOME
   }
 
+function activate_root6 {
+  cd /Users/philipp/Software/root_6.06.08/
+  source bin/thisroot.sh
+  cd $HOME
+  }
+
+
 
 alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
 
@@ -80,8 +87,6 @@ alias ping="ping -c 5"
 alias mv="mv -i"
 alias cp="cp -i"
 alias ln="ln -i"
-# silent root start-up
-alias root="root -l"
 # rsync with progress and svn/git excluded
 alias beam="rsync -avz --progress --exclude=.svn --exclude=.git --exclude=.DS_Store"
 
