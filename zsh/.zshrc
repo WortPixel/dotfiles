@@ -61,13 +61,13 @@ function activate_python2 {
   }
 
 function activate_root5 {
-  cd /Users/philipp/Software/root_5.34.36/build/
+  cd $HOME/Software/root_5.34.36/build/
   source bin/thisroot.sh
   cd $HOME
   }
 
 function activate_root6 {
-  cd /Users/philipp/Software/root_6.06.08/
+  cd $HOME/Software/root_6.06.08/
   source bin/thisroot.sh
   cd $HOME
   }
