@@ -22,18 +22,18 @@ connect() {
 }
 
 lido() {
-    connect lido2 $LIDO_HOME $THESIS/cluster/lido/home
-    connect lido2 $LIDO_DATA $THESIS/cluster/lido/data
+    connect lido2 $LIDO_HOME ~/Cluster/lido/home
+    connect lido2 $LIDO_DATA ~/Cluster/lido/data
 }
 
 madison() {
-    connect icpub $MADISON_HOME $THESIS/cluster/madison/home
-    connect icdata $MADISON_DATA $THESIS/cluster/madison/data
+    connect icpub $MADISON_HOME ~/Cluster/madison/home
+    connect icdata $MADISON_DATA ~/Cluster/madison/data
 }
 
 phido() {
-    connect phido2 $PHIDO_HOME $THESIS/cluster/phido/home
-    connect phido2 $PHIDO_DATA $THESIS/cluster/phido/data
+    connect phido2 $PHIDO_HOME ~/Cluster/phido/home
+    connect phido2 $PHIDO_DATA ~/Cluster/phido/data
 }
 
 function activate_python2 {
@@ -71,10 +71,6 @@ function activate_root6 {
   source bin/thisroot.sh
   cd $HOME
   }
-
-
-
-alias rapidminer="cd $RAPIDMINERSYS && ./scripts/RapidMinerGUI"
 
 alias l="ls"
 alias ll="ls -la"
