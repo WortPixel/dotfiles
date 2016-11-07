@@ -16,16 +16,8 @@ set number          " show line and column number
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 
-" tex 
-autocmd BufNewFile,BufRead *.cls set ft=tex
-autocmd FileType tex call SetTexOptions()
-function SetTexOptions()
-    set shiftwidth=2
-    set tabstop=2
-    set expandtab
-    set shiftround
-    set linebreak
-endfunction
+" javascript
+autocmd FileType javascript setlocal ts=4 sts=4 sw=4
 
 " python
 autocmd FileType python call SetPyOptions()
@@ -36,4 +28,15 @@ function SetPyOptions()
     " Slight red background for things surpassing line 80
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     match OverLength /\%81v.\+/
+endfunction
+
+" tex 
+autocmd BufNewFile,BufRead *.cls set ft=tex
+autocmd FileType tex call SetTexOptions()
+function SetTexOptions()
+    set shiftwidth=2
+    set tabstop=2
+    set expandtab
+    set shiftround
+    set linebreak
 endfunction
