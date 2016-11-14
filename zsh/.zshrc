@@ -55,7 +55,11 @@ function activate_python2 {
   _OLD_PATH=${PATH}
   _OLD_PS1=${PS1}
   # Set new path on top of all
-  export PATH=${HOME}/Library/Python/2.7/bin:${PATH}
+  if [ "$(uname -s)" = "Linux" ]; then
+    export PATH=/usr/bin/:${PATH}
+  else
+    export PATH=${HOME}/Library/Python/2.7/bin:${PATH}
+  fi
   # Indicate that we are in the system python environment
   export PS1="(SysPy2) $PS1"
   }
