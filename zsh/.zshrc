@@ -63,14 +63,26 @@ function activate_python2 {
 function activate_root5 {
   cd $HOME/Software/root_5.34.36/build/
   source bin/thisroot.sh
-  cd $HOME
+  cd - 2>1 > /dev/null
   }
 
 function activate_root6 {
   cd $HOME/Software/root_6.06.08/
   source bin/thisroot.sh
-  cd $HOME
+  cd - 2>1 > /dev/null
   }
+
+function icerec() {
+  activate_python2
+  activate_root5
+  if [[ $1 == 'custom' ]]
+  then
+	  $ICEREC_PARASITIC/env-shell.sh $SHELL
+  else
+	  $ICEREC_TRUNK/env-shell.sh $SHELL
+  fi
+  }
+
 
 alias l="ls"
 alias ll="ls -la"
